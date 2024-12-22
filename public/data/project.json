@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Eviee",
+    "description": "A dynamic website for Eviee Technologies Limited, offering IT solutions and consulting services for various industries.",
+    "imageUrl": "url(/images/eviee-tech.png)",
+    "bgUrl": "url(/images/bg6.jpg)",
+    "linkUrl": ""
+  },
+  {
+    "title": "NAEST",
+    "description": "The National Anveshika Experimental Skill Test: An annual competition in India focused on assessing and nurturing students’ experimental skills in physics.",
+    "imageUrl": "url(/images/naest.png)",
+    "bgUrl": "url(/images/bg3.jpg)",
+    "linkUrl": "/work/naest-educational-platform-for-students"
+  },
+  {
+    "title": "Rvelocity-cli",
+    "description": "A CLI for generating and managing React and React Native components with ease With generic snippets and pre-code ui elements",
+    "imageUrl": "url(/images/npm.png)",
+    "bgUrl": "url(/images/bg4.jpg)",
+    "linkUrl": "/work/build-rvelocity-cli"
+  }
+]

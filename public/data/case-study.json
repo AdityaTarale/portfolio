@@ -1,0 +1,90 @@
+{
+  "build-rvelocity-cli": {
+    "title": "Building Rvelocity-cli",
+    "projectPreview": {
+      "bg": "url(/images/bg4.jpg)",
+      "image": "url(/images/npm.png)"
+    },
+    "sections": [
+      {
+        "title": "Overview",
+        "content": "rvelocity-cli is a highly efficient command-line tool designed to simplify and accelerate the development process for React and React Native projects. It enables the automatic generation of components, file structures, and project configurations, reducing repetitive tasks."
+      },
+      {
+        "title": "Key Features",
+        "list": [
+          "Generates React and React Native components, file structures, and boilerplates effortlessly.",
+          "Supports customizable templates to match project-specific requirements.",
+          "Includes basic Prettier and ESLint setups for coding standards.",
+          "Scalable and lightweight, ensuring minimal performance overhead.",
+          "Simplifies starting new projects with the `rc init` command for consistent and quick setup."
+        ]
+      },
+      {
+        "title": "Technologies Used",
+        "list": [
+          "Node.js for CLI development",
+          "React and React Native integration",
+          "File system manipulation for automatic project setup",
+          "Customizable template structure"
+        ]
+      },
+      {
+        "title": "Challenges and Learnings",
+        "content": "Developing a CLI that is both powerful and user-friendly was a primary challenge. Ensuring compatibility across various project setups and managing dynamically changing React Native configurations required thorough testing and adaptation. This project emphasized the importance of modular design, testing, and user documentation."
+      },
+      {
+        "title": "Outcome",
+        "content": "rvelocity-cli has successfully streamlined the development workflow for React and React Native projects. By reducing repetitive tasks and providing robust boilerplates, it has significantly improved developer productivity and consistency in codebases."
+      }
+    ],
+    "link": {
+      "title": "npm",
+      "url": "https://www.npmjs.com/package/rvelocity-cli"
+    }
+  },
+  "naest-educational-platform-for-students": {
+    "title": "NAEST - The National Anveshika Experimental Skill Test",
+    "projectPreview": {
+      "bg": "url(/images/bg3.jpg)",
+      "image": "url(/images/naest.png)"
+    },
+    "sections": [
+      {
+        "title": "Overview",
+        "content": "The National Anveshika Experimental Skill Test (NAEST) is an annual competition initiated by Padma Shri Prof. HC Verma under the aegis of The National Anveshika Network of India (NANI). It focuses on enhancing students' observational, analytical, and experimental skills in physics. This portal, developed in collaboration with Shiksha Sopan, serves as a comprehensive educational platform supporting a seamless experience for participants, organizers, and evaluators. The platform hosts the competition for two groups: Junior (grades 9 to 12) and Senior (college students pursuing pure sciences at undergraduate and postgraduate levels)."
+      },
+      {
+        "title": "Key Features",
+        "list": [
+          "Role-based login system (Admin, Teachers, Students)",
+          "Comprehensive MCQ and experimental question testing system",
+          "Automatic result generation with detailed performance analytics",
+          "Integrated video and resource sharing for conceptual clarity",
+          "Scalable architecture to support 5000+ simultaneous users",
+          "Responsive and user-friendly design ensuring cross-platform compatibility"
+        ]
+      },
+      {
+        "title": "Technologies Used",
+        "list": [
+          "React and TailwindCSS for responsive and intuitive UI",
+          "Next.js for performance optimization and server-side rendering",
+          "Jest and React Testing Library for unit testing"
+        ]
+      },
+      {
+        "title": "Challenges and Learnings",
+        "content": "Developing a scalable and reliable platform that could handle the surge of users during the competition posed significant challenges. Ensuring security and privacy of student data was another priority. We overcame these by implementing Firebase Authentication and optimizing server calls for efficiency. Collaborating with domain experts, including Prof. HC Verma, helped us gain insights into educational challenges and design user-friendly solutions."
+      },
+      {
+        "title": "Outcome",
+        "content": "The NAEST platform transformed how the competition is conducted by digitalizing processes and enhancing engagement. The system supported over 5000 students nationwide with an intuitive interface, secure data handling, and automated performance insights, earning widespread recognition from educators and participants alike."
+      }
+    ],
+    "link": {
+      "title": "Visit the Website",
+      "url": "https://naest.shiksha-sopan.org/"
+    }
+  }
+}

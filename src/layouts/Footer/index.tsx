@@ -8,18 +8,22 @@ function LinkBoxes() {
     {
       title: "QUICK LINKS",
       links: [
-        { linkName: "Home", linkUrl: "/" },
-        { linkName: "Resume", linkUrl: "/resume" },
-        { linkName: "+91-9405949716", linkUrl: "#contact" },
+        { linkname: "Home", href: "/" },
+        {
+          linkname: "Resume",
+          target: "_blank",
+          href: "https://drive.google.com/file/d/1xwt45q463DWOVmA--tvIeGSOb6kH3hKX/view?usp=sharing",
+        },
+        { linkname: "+91-9405949716", href: "#contact" },
       ],
     },
-    {
-      title: "MISCELLANEOUS",
-      links: [
-        { linkName: "Gallery", linkUrl: "/gallery" },
-        // { linkName: "Me", linkUrl: "/me" },
-      ],
-    },
+    // {
+    //   title: "MISCELLANEOUS",
+    //   links: [
+    //     // { linkname: "Gallery", href: "/gallery" },
+    //     // { linkname: "Me", href: "/me" },
+    //   ],
+    // },
   ];
 
   return (

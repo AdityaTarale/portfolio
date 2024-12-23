@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 type NavbarLink = {
-  linkName: string;
-  linkUrl: string;
+  linkname: string;
+  href: string;
+  target?: string;
 };
 
 type NavbarLinksProps = {
@@ -15,9 +16,9 @@ export default function NavbarLinks({ className, links }: NavbarLinksProps) {
     <ul className={`${className} text-white`}>
       {links?.map((link) => {
         return (
-          <li key={link.linkName} className="hover:underline">
-            <Link href={link.linkUrl}>
-              <p>{link.linkName}</p>
+          <li key={link.linkname} className="hover:underline">
+            <Link {...link}>
+              <p>{link.linkname}</p>
             </Link>
           </li>
         );

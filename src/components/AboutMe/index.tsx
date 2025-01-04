@@ -8,12 +8,12 @@ export default function AboutMe() {
       <FadeEffect />
       <section className="sm:absolute inset-0 z-10 flex flex-col justify-end sm:p-4">
         <p className="text-lg text-gray-200">
-          I, Aditya Tarale, An Nagpurian full-stack developer specializing in{" "}
-          <strong>Frontend development</strong>, currently working at App Sphere
-          Softwares LLP in Indore. Skilled in{" "}
+          I, Aditya Tarale, a full-stack developer hailing from Nagpur
+          Maharashtra, specialize in <strong>frontend development</strong>. I am
+          currently working at App Sphere Softwares LLP in Indore. Skilled in{" "}
           <strong>React, React Native, Next.js, TypeScript, and Node.js</strong>
           , I create scalable and user-friendly web applications. My projects
-          include Mobile Apps, Node.js CLIs, Web apps, and Solution websites
+          include mobile apps, Node.js CLIs, web apps, and solution websites
           with landing pages.
         </p>
       </section>

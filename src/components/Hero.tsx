@@ -25,8 +25,10 @@ export default function Hero() {
 
       {/* Hero content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-        <h1 className="text-5xl font-bold">Engineer by Day, Creator Always</h1>
-        <p className="mt-4 text-2xl text-gray-400">
+        <h1 className="text-4xl sm:text-5xl font-bold animate-fade-up animate-duration-[1200ms] animate-delay-200">
+          Engineer by Day, Creator Always
+        </h1>
+        <p className="mt-4 text-xl sm:text-2xl text-gray-400 animate-fade-up animate-duration-[1200ms] animate-delay-200">
           I build apps that drive results and help your business grow.
         </p>
       </div>

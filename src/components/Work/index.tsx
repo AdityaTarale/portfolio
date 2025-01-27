@@ -26,7 +26,9 @@ export default function Work() {
                       className="text-green-200 hover:underline text-sm"
                     >
                       <span className="flex items-center gap-1">
-                        Read Case Study
+                        {project.isCaseStudyEnabled
+                          ? "Read Case Study"
+                          : "Visit Website"}
                         <Image
                           loading="lazy"
                           className="w-4 h-4 text-green-200"

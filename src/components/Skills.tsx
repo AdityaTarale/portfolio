@@ -78,7 +78,8 @@ const boxArray = [
     iconUrl: getIcon("redux"),
   },
   {
-    condition: "dead",
+    condition: "active",
+    iconUrl: getIcon("webpack"),
   },
   {
     condition: "dead",
@@ -88,7 +89,8 @@ const boxArray = [
     iconUrl: getIcon("scss"),
   },
   {
-    condition: "dead",
+    condition: "active",
+    iconUrl: getIcon("next"),
   },
   {
     condition: "dead",
@@ -108,7 +110,8 @@ const boxArray = [
     condition: "lone",
   },
   {
-    condition: "dead",
+    condition: "active",
+    iconUrl: getIcon("xcode"),
   },
   {
     condition: "active",
@@ -125,7 +128,8 @@ const boxArray = [
     condition: "dead",
   },
   {
-    condition: "lone",
+    condition: "active",
+    iconUrl: getIcon("npm"),
   },
   {
     condition: "active",
@@ -160,7 +164,8 @@ const boxArray = [
     iconUrl: getIcon("node"),
   },
   {
-    condition: "dead",
+    condition: "active",
+    iconUrl: getIcon("storybook"),
   },
   {
     condition: "dead",
@@ -173,7 +178,8 @@ const boxArray = [
     condition: "dead",
   },
   {
-    condition: "lone",
+    condition: "active",
+    iconUrl: getIcon("androidStudio"),
   },
   {
     condition: "dead",
@@ -189,7 +195,8 @@ const boxArray = [
     condition: "lone",
   },
   {
-    condition: "dead",
+    condition: "active",
+    iconUrl: getIcon("yarn"),
   },
   {
     condition: "active",
@@ -206,7 +213,8 @@ const boxArray = [
     condition: "dead",
   },
   {
-    condition: "lone",
+    condition: "active",
+    iconUrl: getIcon("rollupjs"),
   },
   {
     condition: "dead",
@@ -219,7 +227,8 @@ const boxArray = [
     condition: "dead",
   },
   {
-    condition: "dead",
+    condition: "active",
+    iconUrl: getIcon("socket"),
   },
   {
     condition: "active",
@@ -249,7 +258,8 @@ const boxArray = [
     iconUrl: getIcon("json"),
   },
   {
-    condition: "lone",
+    condition: "active",
+    iconUrl: getIcon("cypress"),
   },
   {
     condition: "active",
@@ -259,7 +269,8 @@ const boxArray = [
     condition: "dead",
   },
   {
-    condition: "lone",
+    condition: "active",
+    iconUrl: getIcon("expo"),
   },
   {
     condition: "active",
@@ -272,7 +283,8 @@ const boxArray = [
     condition: "dead",
   },
   {
-    condition: "lone",
+    condition: "active",
+    iconUrl: getIcon("jest"),
   },
   {
     condition: "active",
@@ -303,7 +315,8 @@ const boxArray = [
     condition: "dead",
   },
   {
-    condition: "lone",
+    condition: "active",
+    iconUrl: getIcon("vite"),
   },
   {
     condition: "active",
@@ -317,7 +330,8 @@ const boxArray = [
     iconUrl: getIcon("testing"),
   },
   {
-    condition: "lone",
+    condition: "active",
+    iconUrl: getIcon("postgresql"),
   },
   {
     condition: "dead",

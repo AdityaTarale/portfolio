@@ -150,7 +150,8 @@ const boxArray = [
     iconUrl: getIcon("postman"),
   },
   {
-    condition: "lone",
+    condition: "active",
+    iconUrl: getIcon("antDesign"),
   },
   {
     condition: "active",
@@ -245,7 +246,8 @@ const boxArray = [
     iconUrl: getIcon("ubuntu"),
   },
   {
-    condition: "lone",
+    condition: "active",
+    iconUrl: getIcon("radix"),
   },
   {
     condition: "lone",
@@ -280,7 +282,8 @@ const boxArray = [
     condition: "dead",
   },
   {
-    condition: "dead",
+    condition: "active",
+    iconUrl: getIcon("shadcn"),
   },
   {
     condition: "active",

@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div className="mx-4 md:w-6/12 sm:mx-auto relative h-[calc(100vh-5rem)] bg-black overflow-hidden">
+    <div className="mx-4 sm: sm:w-6/12 sm:mx-auto relative h-[calc(100vh-5rem)] bg-black overflow-hidden">
       {/* Subtle grid pattern */}
       <div
         className="absolute inset-0"

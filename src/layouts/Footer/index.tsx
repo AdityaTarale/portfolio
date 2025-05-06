@@ -12,7 +12,7 @@ function LinkBoxes() {
         {
           linkname: "Resume",
           target: "_blank",
-          href: "https://drive.google.com/file/d/1xwt45q463DWOVmA--tvIeGSOb6kH3hKX/view?usp=sharing",
+          href: "https://drive.google.com/file/d/1--lovWaopVc346647Aa3ye8_V6rT7c93/view",
         },
         { linkname: "+91-9405949716", href: "#contact" },
       ],

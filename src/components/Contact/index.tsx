@@ -3,10 +3,10 @@ export default function Contact() {
     <footer className="mx-4 md:w-6/12 sm:mx-auto mt-12 mb-16 flex flex-col items-center justify-center text-center">
       <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mb-12"></div>
 
-      <h3 className="text-3xl font-bold text-black mb-4">Let's Connect</h3>
+      <h3 className="text-3xl font-bold text-black mb-4">Let&apos;s Connect</h3>
       <p className="text-gray-600 mb-8 max-w-lg">
         Whether you have a question, a project in mind, or just want to say hi,
-        my inbox is always open. I'll try my best to get back to you!
+        my inbox is always open. I&apos;ll try my best to get back to you!
       </p>
 
       <div className="flex flex-wrap justify-center gap-4 sm:gap-6 items-center">

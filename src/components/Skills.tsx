@@ -57,12 +57,13 @@ function SkillBoxCard({ iconKey }: { iconKey: string }) {
     <li className="flex flex-col items-center gap-2 w-full">
       <div className="relative aspect-square w-full rounded-lg border border-emerald-600/30 bg-emerald-600/10 transition-transform hover:scale-105">
         <div className="absolute inset-0 p-3 sm:p-4 flex items-center justify-center">
-          <img
-            loading="lazy"
+          <Image
             className="w-full h-full object-contain"
             alt={iconKey}
             aria-hidden="true"
-            src={String(getIcon(iconKey as any))}
+            src={String(getIcon(iconKey as Parameters<typeof getIcon>[0]))}
+            width={64}
+            height={64}
           />
         </div>
       </div>

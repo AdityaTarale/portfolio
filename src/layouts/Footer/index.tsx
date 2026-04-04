@@ -57,7 +57,7 @@ export default function Footer() {
             />
             <span className="text-sm text-gray-600 mx-4 max-w-sm sm:mx-0 my-2">
               Whether you have a question, a project in mind, or just want to
-              say hi, my inbox is always open. I'll try my best to get back to
+              say hi, my inbox is always open. I&apos;ll try my best to get back to
               you!
             </span>
 

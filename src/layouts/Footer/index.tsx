@@ -8,13 +8,13 @@ function LinkBoxes() {
     {
       title: "QUICK LINKS",
       links: [
-        { linkname: "Home", href: "/" },
+        { linkname: "Home", href: "https://www.adityatarale.com" },
         {
           linkname: "Resume",
           target: "_blank",
           href: "https://drive.google.com/file/d/1--lovWaopVc346647Aa3ye8_V6rT7c93/view",
         },
-        { linkname: "+91-9405949716", href: "#contact" },
+        { linkname: "+91-9405949716", href: "tel:+919405949716" },
       ],
     },
     // {
@@ -57,8 +57,8 @@ export default function Footer() {
             />
             <span className="text-sm text-gray-600 mx-4 max-w-sm sm:mx-0 my-2">
               Whether you have a question, a project in mind, or just want to
-              say hi, my inbox is always open. I&apos;ll try my best to get back to
-              you!
+              say hi, my inbox is always open. I&apos;ll try my best to get back
+              to you!
             </span>
 
             <SocialLinks className="mt-4" />

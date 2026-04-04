@@ -2,7 +2,7 @@ import { ProjectPreview } from "@/elements/ProjectPreview";
 import { getIcon } from "@/utils/iconsRegistry";
 import Image from "next/image";
 import Link from "next/link";
-import projectData from "../../../public/data/project.json";
+import projectData from "../../public/data/project.json";
 
 export default function Work() {
   return (

@@ -11,13 +11,17 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "**.wixstatic.com", // For appsphere-logo image
       },
-      {
-        protocol: "https",
-        hostname: "www.webtech23.com", // For 6Simplex logo
-      },
+      // {
+      //   protocol: "https",
+      //   hostname: "www.webtech23.com", // For 6Simplex logo
+      // },
       {
         protocol: "https",
         hostname: "flowbite.s3.amazonaws.com", // For Flowbite images
+      },
+      {
+        protocol: "https",
+        hostname: "s7ap1.scene7.com", // For TCS logo
       },
     ],
   },

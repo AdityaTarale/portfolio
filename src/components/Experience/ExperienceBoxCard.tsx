@@ -16,7 +16,7 @@ export default function ExperienceBoxCard({
   date,
 }: ExperienceBoxCardProps) {
   return (
-    <section className="relative flex flex-col sm:flex-row w-full gap-4 p-6 rounded-lg border border-slate-700 bg-gradient-to-b from-gray-900 to-black">
+    <section className="relative flex flex-col sm:flex-row w-full gap-4 p-6 rounded-lg border border-slate-300 bg-gradient-to-b from-gray-50 to-white">
       <Noise />
 
       {/* Logo */}
@@ -32,17 +32,17 @@ export default function ExperienceBoxCard({
 
       {/* Content */}
       <div className="flex-1">
-        <h4 className="text-lg font-semibold text-blue-50 sm:text-xl">
+        <h4 className="text-lg font-semibold text-blue-950 sm:text-xl">
           {companyTitle}
         </h4>
-        <h5 className="text-sm italic text-gray-400 sm:text-base">
+        <h5 className="text-sm italic text-gray-600 sm:text-base">
           {jobTitle}
         </h5>
-        <div className="mt-2 text-gray-300">{jobDescription}</div>
+        <div className="mt-2 text-gray-800">{jobDescription}</div>
       </div>
 
       {/* Date */}
-      <span className="text-sm text-gray-400 sm:text-base">{date}</span>
+      <span className="text-sm text-gray-600 sm:text-base">{date}</span>
     </section>
   );
 }

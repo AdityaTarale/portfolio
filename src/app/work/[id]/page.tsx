@@ -13,7 +13,7 @@ export default async function Work({
 
   if (!project) {
     return (
-      <div className="text-center text-white mt-12">
+      <div className="text-center text-black mt-12">
         <p className="text-2xl font-semibold">Project not found</p>
       </div>
     );
@@ -22,7 +22,7 @@ export default async function Work({
   return (
     <section className="mx-4 md:w-6/12 sm:mx-auto flex flex-col gap-6 mt-12">
       {/* Title */}
-      <h3 className="text-3xl font-bold text-white mb-4">{project.title}</h3>
+      <h3 className="text-3xl font-bold text-black mb-4">{project.title}</h3>
 
       {/* Project Preview */}
       <ProjectPreview
@@ -30,7 +30,7 @@ export default async function Work({
         image={project.projectPreview.image}
       />
       <Link href={project.link.url} target="_blank">
-        <span className="px-4 py-1 border-[1px] border-gray-700 text-gray-300 rounded-full">
+        <span className="px-4 py-1 border-[1px] border-gray-300 text-gray-800 rounded-full">
           {project.link.title}
         </span>
       </Link>
@@ -39,13 +39,13 @@ export default async function Work({
       {project.sections.map((section, index) => (
         <div key={index}>
           {/* Section Title */}
-          <h4 className="text-xl font-bold text-white mb-4">{section.title}</h4>
+          <h4 className="text-xl font-bold text-black mb-4">{section.title}</h4>
 
           {/* Section Content or List */}
           {section.content ? (
-            <p className="text-gray-300">{section.content}</p>
+            <p className="text-gray-800">{section.content}</p>
           ) : (
-            <ul className="list-disc list-inside text-gray-300">
+            <ul className="list-disc list-inside text-gray-800">
               {section.list?.map((item, idx) => (
                 <li key={idx}>{item}</li>
               ))}

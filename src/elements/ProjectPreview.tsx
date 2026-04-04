@@ -1,13 +1,16 @@
 export const ProjectPreview = ({
   bg,
   image,
+  className,
 }: {
   bg: string;
   image: string;
+  className?: string;
 }) => {
   return (
-    <div className="w-full h-[240px] sm:h-[524px] border-[1px] border-gray-700 rounded-2xl relative overflow-hidden">
+    <div className={`w-full border-[1px] border-gray-300 rounded-2xl relative overflow-hidden ${className || 'h-[240px] sm:h-[300px]'}`}>
       <div
+
         className="absolute inset-0 w-full h-full z-10"
         style={{
           backgroundImage: bg,
@@ -15,7 +18,7 @@ export const ProjectPreview = ({
         }}
       />
       <div
-        className="absolute z-50 h-[90%] w-[90%] border-[1px] border-gray-700 rounded-lg"
+        className="absolute z-50 h-[90%] w-[90%] border-[1px] border-gray-300 rounded-lg"
         style={{
           backgroundImage: image,
           backgroundSize: "cover",

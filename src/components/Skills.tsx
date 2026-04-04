@@ -41,11 +41,11 @@ export default function Skills() {
   return (
     <main>
       <section className="mx-4 md:w-6/12 sm:mx-auto">
-        <h3 className="text-3xl font-bold text-white mb-4">My Skills</h3>
+        <h3 className="text-3xl font-bold text-black mb-4">My Skills</h3>
       </section>
-      <section className="container mx-auto flex flex-col items-center justify-center text-white">
-        <div className="w-full overflow-x-scroll">
-          <ul className="opacity:1 transform:none mx-auto flex w-[calc(100rem)] max-w-5xl flex-wrap items-center justify-center gap-2 overflow-x-scroll p-1">
+      <section className="container mx-auto flex flex-col items-center justify-center text-black">
+        <div className="w-full overflow-x-scroll no-scrollbar">
+          <ul className="opacity:1 transform:none mx-auto flex w-[calc(100rem)] max-w-5xl flex-wrap items-center justify-center gap-2 overflow-x-scroll no-scrollbar p-1">
             {boxArray.map((box, i) => {
               if (box.condition === "dead") {
                 return <SkillBoxCardDead key={box.condition + i} />;
@@ -68,122 +68,14 @@ const boxArray = [
   },
   {
     condition: "active",
-    iconUrl: getIcon("firebase"),
+    iconUrl: getIcon("html"),
   },
   {
     condition: "dead",
   },
   {
     condition: "active",
-    iconUrl: getIcon("redux"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("webpack"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("scss"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("next"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("ionic"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("mongo"),
-  },
-  {
-    condition: "lone",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("xcode"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("router"),
-  },
-  {
-    condition: "lone",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("tailwind"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("npm"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("material"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("query"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("postman"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("antDesign"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("typescript"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("node"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("storybook"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("react"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("androidStudio"),
-  },
-  {
-    condition: "dead",
+    iconUrl: getIcon("css"),
   },
   {
     condition: "active",
@@ -193,43 +85,33 @@ const boxArray = [
     condition: "dead",
   },
   {
+    condition: "active",
+    iconUrl: getIcon("typescript"),
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("react"),
+  },
+  {
+    condition: "dead",
+  },
+  {
+    condition: "dead",
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("next"),
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("redux"),
+  },
+  {
     condition: "lone",
   },
   {
     condition: "active",
-    iconUrl: getIcon("yarn"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("css"),
-  },
-  {
-    condition: "lone",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("vscode"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("rollupjs"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("jira"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("socket"),
+    iconUrl: getIcon("query"),
   },
   {
     condition: "active",
@@ -239,47 +121,33 @@ const boxArray = [
     condition: "lone",
   },
   {
-    condition: "dead",
-  },
-  {
     condition: "active",
-    iconUrl: getIcon("ubuntu"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("radix"),
-  },
-  {
-    condition: "lone",
+    iconUrl: getIcon("router"),
   },
   {
     condition: "dead",
   },
   {
     condition: "active",
-    iconUrl: getIcon("json"),
+    iconUrl: getIcon("tailwind"),
   },
   {
     condition: "active",
-    iconUrl: getIcon("cypress"),
+    iconUrl: getIcon("scss"),
   },
   {
     condition: "active",
-    iconUrl: getIcon("githubColored"),
+    iconUrl: getIcon("material"),
+  },
+  {
+    condition: "dead",
   },
   {
     condition: "dead",
   },
   {
     condition: "active",
-    iconUrl: getIcon("expo"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("linux"),
-  },
-  {
-    condition: "dead",
+    iconUrl: getIcon("antDesign"),
   },
   {
     condition: "active",
@@ -287,11 +155,25 @@ const boxArray = [
   },
   {
     condition: "active",
-    iconUrl: getIcon("jest"),
+    iconUrl: getIcon("radix"),
+  },
+  {
+    condition: "dead",
   },
   {
     condition: "active",
-    iconUrl: getIcon("html"),
+    iconUrl: getIcon("styleGuide"),
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("expo"),
+  },
+  {
+    condition: "dead",
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("ionic"),
   },
   {
     condition: "dead",
@@ -304,26 +186,87 @@ const boxArray = [
     condition: "dead",
   },
   {
-    condition: "lone",
+    condition: "active",
+    iconUrl: getIcon("node"),
   },
   {
     condition: "active",
-    iconUrl: getIcon("styleGuide"),
+    iconUrl: getIcon("python"),
+  },
+  {
+    condition: "lone",
   },
   {
     condition: "active",
     iconUrl: getIcon("express"),
   },
   {
+    condition: "active",
+    iconUrl: getIcon("firebase"),
+  },
+  {
+    condition: "lone",
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("mongo"),
+  },
+  {
     condition: "dead",
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("postgresql"),
+  },
+  {
+    condition: "dead",
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("socket"),
+  },
+  {
+    condition: "dead",
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("npm"),
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("yarn"),
+  },
+  {
+    condition: "lone",
+  },
+  {
+    condition: "dead",
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("webpack"),
   },
   {
     condition: "active",
     iconUrl: getIcon("vite"),
   },
   {
+    condition: "lone",
+  },
+  {
+    condition: "dead",
+  },
+  {
     condition: "active",
-    iconUrl: getIcon("nginx"),
+    iconUrl: getIcon("rollupjs"),
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("jest"),
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("cypress"),
   },
   {
     condition: "dead",
@@ -334,7 +277,65 @@ const boxArray = [
   },
   {
     condition: "active",
-    iconUrl: getIcon("postgresql"),
+    iconUrl: getIcon("storybook"),
+  },
+  {
+    condition: "dead",
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("githubColored"),
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("vscode"),
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("androidStudio"),
+  },
+  {
+    condition: "dead",
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("xcode"),
+  },
+  {
+    condition: "dead",
+  },
+  {
+    condition: "lone",
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("linux"),
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("ubuntu"),
+  },
+  {
+    condition: "dead",
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("nginx"),
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("postman"),
+  },
+  {
+    condition: "dead",
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("jira"),
+  },
+  {
+    condition: "active",
+    iconUrl: getIcon("json"),
   },
   {
     condition: "dead",

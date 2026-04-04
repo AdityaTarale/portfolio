@@ -7,6 +7,7 @@ const icons = {
   redux: "/icons/redux.svg",
   saga: "/icons/saga.svg",
   node: "/icons/nodejs.svg",
+  python: "/icons/python.svg",
   scss: "/icons/scss.svg",
   tailwind: "/icons/tailwindcss.svg",
   css: "/icons/css.svg",

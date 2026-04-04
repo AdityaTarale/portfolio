@@ -13,7 +13,7 @@ type NavbarLinksProps = {
 
 export default function NavbarLinks({ className, links }: NavbarLinksProps) {
   return (
-    <ul className={`${className} text-white`}>
+    <ul className={`${className} text-black`}>
       {links?.map((link) => {
         return (
           <li key={link.linkname} className="hover:underline">

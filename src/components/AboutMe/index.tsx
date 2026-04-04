@@ -2,12 +2,12 @@ import BatmanAnimation from "./BatmanAnimation";
 
 export default function AboutMe() {
   return (
-    <div className="mx-4 md:w-6/12 sm:mx-auto relative bg-black text-white">
-      <h3 className="text-3xl font-bold text-white mb-4">About Me</h3>
+    <div className="mx-4 md:w-6/12 sm:mx-auto relative bg-white text-black">
+      <h3 className="text-3xl font-bold text-black mb-4">About Me</h3>
       <BatmanAnimation />
       <FadeEffect />
       <section className="sm:absolute inset-0 z-10 flex flex-col justify-end sm:p-4">
-        <p className="text-lg text-gray-200">
+        <p className="text-lg text-gray-800">
           I, Aditya Tarale, a full-stack developer hailing from Nagpur
           Maharashtra, specialize in <strong>frontend development</strong>. I am
           currently working at App Sphere Softwares LLP in Indore. Skilled in{" "}

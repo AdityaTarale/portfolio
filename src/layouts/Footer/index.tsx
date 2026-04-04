@@ -30,7 +30,7 @@ function LinkBoxes() {
     <section className="flex flex-col gap-6 sm:flex-row sm:gap-12 mx-4 sm:mx-0">
       {linksData.map((box) => (
         <div className="flex flex-col" key={box.title}>
-          <h6 className="mb-3 text-sm font-medium text-gray-300">
+          <h6 className="mb-3 text-sm font-medium text-gray-700">
             {box.title}
           </h6>
           <NavbarLinks className="space-y-2" links={box.links} />
@@ -42,7 +42,7 @@ function LinkBoxes() {
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-gray-800 bg-black">
+    <footer className="mt-24 border-t border-gray-200 bg-white">
       <div className="sm:w-6/12 mx-auto py-14">
         <div className="flex flex-col gap-10 sm:flex-row sm:justify-between sm:items-center">
           {/* Brand Section */}
@@ -53,8 +53,9 @@ export default function Footer() {
               alt="signature"
               width={249}
               height={50}
+              className="invert"
             />
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-gray-600">
               If you need any help, ping me
             </span>
             <SocialLinks />
@@ -63,7 +64,7 @@ export default function Footer() {
           <LinkBoxes />
         </div>
       </div>
-      <p className="py-4 text-center text-sm text-gray-500">
+      <p className="py-4 text-center text-sm text-gray-600">
         Crafted with ❤️ by Aditya Tarale
       </p>
     </footer>

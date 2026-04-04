@@ -6,7 +6,7 @@ import Work from "@/components/Work";
 
 export default function Home() {
   return (
-    <main className="bg-black flex flex-col gap-24">
+    <main className="bg-white flex flex-col gap-24">
       <Hero />
       <AboutMe />
       <Experience />

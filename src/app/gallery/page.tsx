@@ -3,7 +3,7 @@ import galleryData from "../../../public/data/gallery.json";
 
 export default function Home() {
   return (
-    <main className="mt-24 flex flex-col gap-48 bg-black md:w-11/12 mx-auto">
+    <main className="mt-24 flex flex-col gap-48 bg-white md:w-11/12 mx-auto">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {galleryData.map((column, colIdx) => (
           <div key={colIdx} className="grid gap-4">

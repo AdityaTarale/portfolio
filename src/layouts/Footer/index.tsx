@@ -8,7 +8,11 @@ function LinkBoxes() {
     {
       title: "QUICK LINKS",
       links: [
-        { linkname: "Home", href: "https://www.adityatarale.com" },
+        {
+          linkname: "Home",
+          href: "/",
+          scroll: true,
+        },
         {
           linkname: "Resume",
           target: "_blank",

@@ -55,10 +55,9 @@ const icons = {
   npmBg: "/images/npm.png",
   naest: "/images/naest.png",
   evieeTech: "/images/eviee-tech.png",
+  stackoverflow: "/icons/stackoverflow.svg",
+  codeforces: "/icons/codeforces.svg",
+  x: "/icons/x.svg",
 };
 
-export const getIcon = (iconKey: keyof typeof icons) => {
-  const path = icons[iconKey];
-
-  return path;
-};
+export const getIcon = (iconKey: keyof typeof icons) => icons[iconKey];

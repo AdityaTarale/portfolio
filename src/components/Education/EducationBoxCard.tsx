@@ -1,20 +1,20 @@
 import Image from "next/image";
 
-interface ExperienceBoxCardProps {
+interface EducationBoxCardProps {
   imgUrl: string;
-  companyTitle: string;
-  jobTitle: string;
-  jobDescription: React.ReactNode;
+  institutionName: string;
+  degreeTitle: string;
+  description: React.ReactNode;
   date: string;
 }
 
-export default function ExperienceBoxCard({
+export default function EducationBoxCard({
   imgUrl,
-  companyTitle,
-  jobTitle,
-  jobDescription,
+  institutionName,
+  degreeTitle,
+  description,
   date,
-}: ExperienceBoxCardProps) {
+}: EducationBoxCardProps) {
   return (
     <section className="relative flex flex-col sm:flex-row w-full gap-4 p-6 rounded-lg border border-slate-300 bg-gradient-to-b from-gray-50 to-white">
       <Noise />
@@ -23,7 +23,7 @@ export default function ExperienceBoxCard({
       <div className="w-16 sm:w-20">
         <Image
           src={imgUrl}
-          alt={`${companyTitle} Logo`}
+          alt={`${institutionName} Logo`}
           width={80}
           height={80}
           className="object-contain"
@@ -33,16 +33,16 @@ export default function ExperienceBoxCard({
       {/* Content */}
       <div className="flex-1">
         <h4 className="text-lg font-semibold text-blue-950 sm:text-xl">
-          {companyTitle}
+          {institutionName}
         </h4>
         <h5 className="text-sm italic text-gray-600 sm:text-base">
-          {jobTitle}
+          {degreeTitle}
         </h5>
-        <div className="mt-2 text-gray-800">{jobDescription}</div>
+        <div className="mt-2 text-gray-800">{description}</div>
       </div>
 
       {/* Date */}
-      <span className="text-sm text-gray-600 sm:text-base">{date}</span>
+      <span className="text-sm text-gray-600 sm:text-base whitespace-nowrap">{date}</span>
     </section>
   );
 }

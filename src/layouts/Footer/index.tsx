@@ -55,18 +55,24 @@ export default function Footer() {
               height={50}
               className="invert"
             />
-            <span className="text-sm text-gray-600">
-              If you need any help, ping me
+            <span className="text-sm text-gray-600 mx-4 max-w-sm sm:mx-0 my-2">
+              Whether you have a question, a project in mind, or just want to
+              say hi, my inbox is always open. I'll try my best to get back to
+              you!
             </span>
-            <SocialLinks />
+
+            <SocialLinks className="mt-4" />
           </section>
           {/* Links Section */}
           <LinkBoxes />
         </div>
       </div>
-      <p className="py-4 text-center text-sm text-gray-600">
-        Crafted with ❤️ by Aditya Tarale
-      </p>
+      <div className="py-4 text-center text-sm text-gray-600">
+        <p>Crafted with ❤️ by Aditya Tarale</p>
+        <p className="text-xs text-gray-400 mt-1">
+          © {new Date().getFullYear()}. Built with Next.js & Tailwind.
+        </p>
+      </div>
     </footer>
   );
 }

@@ -10,24 +10,12 @@ export const ProjectPreview = ({
   return (
     <div className={`w-full border-[1px] border-gray-300 rounded-2xl relative overflow-hidden ${className || 'h-[240px] sm:h-[300px]'}`}>
       <div
-
-        className="absolute inset-0 w-full h-full z-10"
-        style={{
-          backgroundImage: bg,
-          backgroundSize: "100%",
-        }}
+        className="absolute inset-0 w-full h-full z-10 bg-[length:100%]"
+        style={{ backgroundImage: bg }}
       />
       <div
-        className="absolute z-50 h-[90%] w-[90%] border-[1px] border-gray-300 rounded-lg"
-        style={{
-          backgroundImage: image,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-        }}
+        className="absolute z-50 h-[90%] w-[90%] border-[1px] border-gray-300 rounded-lg bg-cover bg-no-repeat bg-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        style={{ backgroundImage: image }}
       />
     </div>
   );

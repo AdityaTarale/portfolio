@@ -1,24 +1,56 @@
 import { getIcon } from "@/utils/iconsRegistry";
 import Image from "next/image";
 
-const getDisplayName = (key: string) => {
-  const overrides: Record<string, string> = {
-    html: "HTML", css: "CSS", javascript: "JavaScript", typescript: "TypeScript", 
-    react: "React", next: "Next.js", redux: "Redux", query: "React Query", 
-    saga: "Redux Saga", router: "React Router", tailwind: "Tailwind CSS", 
-    scss: "SCSS", material: "Material UI", antDesign: "Ant Design", 
-    shadcn: "Shadcn UI", radix: "Radix UI", styleGuide: "StyleGuidist", 
-    expo: "Expo", ionic: "Ionic", openLayers: "OpenLayers",
-    node: "Node.js", python: "Python", express: "Express", firebase: "Firebase", 
-    mongo: "MongoDB", postgresql: "PostgreSQL", socket: "Socket.io",
-    npm: "NPM", yarn: "Yarn", webpack: "Webpack", vite: "Vite", 
-    rollupjs: "Rollup.js", jest: "Jest", cypress: "Cypress", testing: "Testing Lib", 
-    storybook: "Storybook", githubColored: "GitHub", vscode: "VS Code", 
-    androidStudio: "Android Studio", xcode: "Xcode", linux: "Linux", 
-    ubuntu: "Ubuntu", nginx: "NGINX", postman: "Postman", jira: "Jira", json: "JSON"
-  };
-  return overrides[key] || key;
+const NAME_OVERRIDES: Record<string, string> = {
+  html: "HTML",
+  css: "CSS",
+  javascript: "JavaScript",
+  typescript: "TypeScript",
+  react: "React",
+  next: "Next.js",
+  redux: "Redux",
+  query: "React Query",
+  saga: "Redux Saga",
+  router: "React Router",
+  tailwind: "Tailwind CSS",
+  scss: "SCSS",
+  material: "Material UI",
+  antDesign: "Ant Design",
+  shadcn: "Shadcn UI",
+  radix: "Radix UI",
+  styleGuide: "StyleGuidist",
+  expo: "Expo",
+  ionic: "Ionic",
+  openLayers: "OpenLayers",
+  node: "Node.js",
+  python: "Python",
+  express: "Express",
+  firebase: "Firebase",
+  mongo: "MongoDB",
+  postgresql: "PostgreSQL",
+  socket: "Socket.io",
+  npm: "NPM",
+  yarn: "Yarn",
+  webpack: "Webpack",
+  vite: "Vite",
+  rollupjs: "Rollup.js",
+  jest: "Jest",
+  cypress: "Cypress",
+  testing: "Testing Lib",
+  storybook: "Storybook",
+  githubColored: "GitHub",
+  vscode: "VS Code",
+  androidStudio: "Android Studio",
+  xcode: "Xcode",
+  linux: "Linux",
+  ubuntu: "Ubuntu",
+  nginx: "NGINX",
+  postman: "Postman",
+  jira: "Jira",
+  json: "JSON",
 };
+
+const getDisplayName = (key: string) => NAME_OVERRIDES[key] || key;
 
 function SkillBoxCard({ iconKey }: { iconKey: string }) {
   return (
@@ -42,48 +74,81 @@ function SkillBoxCard({ iconKey }: { iconKey: string }) {
 }
 
 export default function Skills() {
-  const frontendKeys = [
-    "html", "css", "javascript", "python", "typescript", "react", "next",
-    "redux", "query", "saga", "router", "tailwind", "scss", "material",
-    "antDesign", "shadcn", "radix", "styleGuide", "expo", "ionic", "openLayers"
-  ];
-  
-  const backendKeys = ["node", "express", "firebase", "mongo", "postgresql", "socket"];
-  
-  const toolsKeys = [
-    "npm", "yarn", "webpack", "vite", "rollupjs", "jest", "cypress", "testing",
-    "storybook", "githubColored", "vscode", "androidStudio", "xcode", "linux",
-    "ubuntu", "nginx", "postman", "jira", "json"
+  const skillCategories = [
+    {
+      title: "Languages & Frontend",
+      keys: [
+        "html",
+        "css",
+        "javascript",
+        "python",
+        "typescript",
+        "react",
+        "next",
+        "redux",
+        "query",
+        "saga",
+        "router",
+        "tailwind",
+        "scss",
+        "material",
+        "antDesign",
+        "shadcn",
+        "radix",
+        "styleGuide",
+        "expo",
+        "ionic",
+        "openLayers",
+      ],
+    },
+    {
+      title: "Backend & Databases",
+      keys: ["node", "express", "firebase", "mongo", "postgresql", "socket"],
+    },
+    {
+      title: "Tools & Others",
+      keys: [
+        "npm",
+        "yarn",
+        "webpack",
+        "vite",
+        "rollupjs",
+        "jest",
+        "cypress",
+        "testing",
+        "storybook",
+        "githubColored",
+        "vscode",
+        "androidStudio",
+        "xcode",
+        "linux",
+        "ubuntu",
+        "nginx",
+        "postman",
+        "jira",
+        "json",
+      ],
+    },
   ];
 
   return (
     <section className="mx-4 md:w-6/12 sm:mx-auto flex flex-col text-black mb-12">
-      <h3 className="text-3xl font-bold mb-6">My Skills</h3>
-      
+      <h3 className="text-3xl font-bold mb-4">My Skills</h3>
+
       <div className="flex flex-col gap-10 w-full">
-          
-          <div>
-            <h4 className="text-xl font-bold mb-4 text-gray-800 border-b border-gray-200 pb-2">Frontend & Languages</h4>
+        {skillCategories.map((category) => (
+          <div key={category.title}>
+            <h4 className="text-xl font-bold mb-4 text-gray-800 border-b border-gray-200 pb-2">
+              {category.title}
+            </h4>
             <ul className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-7 xl:grid-cols-10 gap-3 sm:gap-4">
-               {frontendKeys.map((key, i) => <SkillBoxCard iconKey={key} key={i} />)}
+              {category.keys.map((key) => (
+                <SkillBoxCard iconKey={key} key={key} />
+              ))}
             </ul>
           </div>
-
-          <div>
-            <h4 className="text-xl font-bold mb-4 text-gray-800 border-b border-gray-200 pb-2">Backend</h4>
-            <ul className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-7 xl:grid-cols-10 gap-3 sm:gap-4">
-              {backendKeys.map((key, i) => <SkillBoxCard iconKey={key} key={i} />)}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-xl font-bold mb-4 text-gray-800 border-b border-gray-200 pb-2">Tools & Others</h4>
-            <ul className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-7 xl:grid-cols-10 gap-3 sm:gap-4">
-              {toolsKeys.map((key, i) => <SkillBoxCard iconKey={key} key={i} />)}
-            </ul>
-          </div>
-
-        </div>
+        ))}
+      </div>
     </section>
   );
 }

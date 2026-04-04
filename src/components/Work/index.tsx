@@ -11,9 +11,16 @@ export default function Work() {
       <div className="flex flex-col gap-8">
         {projectData.map((project) => {
           return (
-            <div key={project.title} className="flex flex-col md:flex-row gap-8 items-center md:items-start mb-2">
+            <div
+              key={project.title}
+              className="flex flex-col md:flex-row gap-8 items-center md:items-start mb-2"
+            >
               <div className="w-full md:w-1/2">
-                <ProjectPreview bg={project.bgUrl} image={project.imageUrl} className="w-full aspect-video" />
+                <ProjectPreview
+                  bg={project.bgUrl}
+                  image={project.imageUrl}
+                  className="w-full aspect-video"
+                />
               </div>
 
               <div className="w-full md:w-1/2 flex flex-col gap-4">
@@ -33,8 +40,7 @@ export default function Work() {
                           : "Visit Website"}
                         <Image
                           loading="lazy"
-                          className="w-4 h-4"
-                          style={{ filter: "brightness(0) saturate(100%)" }}
+                          className="w-4 h-4 brightness-0"
                           alt={"chevron-right"}
                           aria-hidden="true"
                           src={getIcon("chevronRight")}

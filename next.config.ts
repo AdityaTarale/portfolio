@@ -23,6 +23,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "s7ap1.scene7.com", // For TCS logo
       },
+      {
+        protocol: "https",
+        hostname: "nagpuruniversity.ac.in", // For RTMNU logo
+      },
     ],
   },
 };

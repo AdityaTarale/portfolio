@@ -1,343 +1,89 @@
 import { getIcon } from "@/utils/iconsRegistry";
 import Image from "next/image";
 
-function SkillBoxCardLone() {
-  return (
-    <li className="opacity: 0.5 transform:none grid aspect-square w-20 place-items-center rounded-lg border border-emerald-600/30 bg-emerald-600/10 opacity-60" />
-  );
-}
+const getDisplayName = (key: string) => {
+  const overrides: Record<string, string> = {
+    html: "HTML", css: "CSS", javascript: "JavaScript", typescript: "TypeScript", 
+    react: "React", next: "Next.js", redux: "Redux", query: "React Query", 
+    saga: "Redux Saga", router: "React Router", tailwind: "Tailwind CSS", 
+    scss: "SCSS", material: "Material UI", antDesign: "Ant Design", 
+    shadcn: "Shadcn UI", radix: "Radix UI", styleGuide: "StyleGuidist", 
+    expo: "Expo", ionic: "Ionic", openLayers: "OpenLayers",
+    node: "Node.js", python: "Python", express: "Express", firebase: "Firebase", 
+    mongo: "MongoDB", postgresql: "PostgreSQL", socket: "Socket.io",
+    npm: "NPM", yarn: "Yarn", webpack: "Webpack", vite: "Vite", 
+    rollupjs: "Rollup.js", jest: "Jest", cypress: "Cypress", testing: "Testing Lib", 
+    storybook: "Storybook", githubColored: "GitHub", vscode: "VS Code", 
+    androidStudio: "Android Studio", xcode: "Xcode", linux: "Linux", 
+    ubuntu: "Ubuntu", nginx: "NGINX", postman: "Postman", jira: "Jira", json: "JSON"
+  };
+  return overrides[key] || key;
+};
 
-function SkillBoxCardDead() {
+function SkillBoxCard({ iconKey }: { iconKey: string }) {
   return (
-    <li className="opacity: 0.3; transform: none; grid aspect-square w-20 place-items-center rounded-lg border border-emerald-600/30 bg-emerald-600/10 opacity-30" />
-  );
-}
-
-function SkillBoxCardActive({
-  box,
-}: {
-  box: { condition: string; iconUrl?: string };
-}) {
-  return (
-    <li className="opacity: 1  transform: none  grid aspect-square w-20 place-items-center rounded-lg border border-emerald-600/30 bg-emerald-600/10">
-      <span className="relative m-0 box-border inline-block w-full overflow-hidden border-0 bg-none p-2 opacity-100">
-        <span className="m-0 box-border flex w-full items-center justify-center border-0 bg-none p-0 opacity-100">
-          <Image
+    <li className="flex flex-col items-center gap-2 w-full">
+      <div className="relative aspect-square w-full rounded-lg border border-emerald-600/30 bg-emerald-600/10 transition-transform hover:scale-105">
+        <div className="absolute inset-0 p-3 sm:p-4 flex items-center justify-center">
+          <img
             loading="lazy"
-            className="m-0 block w-full border-0 bg-none p-0 opacity-100"
-            alt={box.condition}
+            className="w-full h-full object-contain"
+            alt={iconKey}
             aria-hidden="true"
-            src={String(box.iconUrl)}
-            width={1080}
-            height={1080}
+            src={String(getIcon(iconKey as any))}
           />
-        </span>
+        </div>
+      </div>
+      <span className="text-[10px] sm:text-xs text-center text-gray-700 font-medium leading-tight">
+        {getDisplayName(iconKey)}
       </span>
     </li>
   );
 }
 
 export default function Skills() {
+  const frontendKeys = [
+    "html", "css", "javascript", "python", "typescript", "react", "next",
+    "redux", "query", "saga", "router", "tailwind", "scss", "material",
+    "antDesign", "shadcn", "radix", "styleGuide", "expo", "ionic", "openLayers"
+  ];
+  
+  const backendKeys = ["node", "express", "firebase", "mongo", "postgresql", "socket"];
+  
+  const toolsKeys = [
+    "npm", "yarn", "webpack", "vite", "rollupjs", "jest", "cypress", "testing",
+    "storybook", "githubColored", "vscode", "androidStudio", "xcode", "linux",
+    "ubuntu", "nginx", "postman", "jira", "json"
+  ];
+
   return (
-    <main>
-      <section className="mx-4 md:w-6/12 sm:mx-auto">
-        <h3 className="text-3xl font-bold text-black mb-4">My Skills</h3>
-      </section>
-      <section className="container mx-auto flex flex-col items-center justify-center text-black">
-        <div className="w-full overflow-x-scroll no-scrollbar">
-          <ul className="opacity:1 transform:none mx-auto flex w-[calc(100rem)] max-w-5xl flex-wrap items-center justify-center gap-2 overflow-x-scroll no-scrollbar p-1">
-            {boxArray.map((box, i) => {
-              if (box.condition === "dead") {
-                return <SkillBoxCardDead key={box.condition + i} />;
-              }
-              if (box.condition === "lone") {
-                return <SkillBoxCardLone key={box.condition + i} />;
-              }
-              return <SkillBoxCardActive box={box} key={box.condition + i} />;
-            })}
-          </ul>
+    <section className="mx-4 md:w-6/12 sm:mx-auto flex flex-col text-black mb-12">
+      <h3 className="text-3xl font-bold mb-6">My Skills</h3>
+      
+      <div className="flex flex-col gap-10 w-full">
+          
+          <div>
+            <h4 className="text-xl font-bold mb-4 text-gray-800 border-b border-gray-200 pb-2">Frontend & Languages</h4>
+            <ul className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-7 xl:grid-cols-10 gap-3 sm:gap-4">
+               {frontendKeys.map((key, i) => <SkillBoxCard iconKey={key} key={i} />)}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-bold mb-4 text-gray-800 border-b border-gray-200 pb-2">Backend</h4>
+            <ul className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-7 xl:grid-cols-10 gap-3 sm:gap-4">
+              {backendKeys.map((key, i) => <SkillBoxCard iconKey={key} key={i} />)}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-xl font-bold mb-4 text-gray-800 border-b border-gray-200 pb-2">Tools & Others</h4>
+            <ul className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-7 xl:grid-cols-10 gap-3 sm:gap-4">
+              {toolsKeys.map((key, i) => <SkillBoxCard iconKey={key} key={i} />)}
+            </ul>
+          </div>
+
         </div>
-      </section>
-    </main>
+    </section>
   );
 }
-
-const boxArray = [
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("html"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("css"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("javascript"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("typescript"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("react"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("next"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("redux"),
-  },
-  {
-    condition: "lone",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("query"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("saga"),
-  },
-  {
-    condition: "lone",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("router"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("tailwind"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("scss"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("material"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("antDesign"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("shadcn"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("radix"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("styleGuide"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("expo"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("ionic"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("openLayers"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("node"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("python"),
-  },
-  {
-    condition: "lone",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("express"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("firebase"),
-  },
-  {
-    condition: "lone",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("mongo"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("postgresql"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("socket"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("npm"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("yarn"),
-  },
-  {
-    condition: "lone",
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("webpack"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("vite"),
-  },
-  {
-    condition: "lone",
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("rollupjs"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("jest"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("cypress"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("testing"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("storybook"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("githubColored"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("vscode"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("androidStudio"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("xcode"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "lone",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("linux"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("ubuntu"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("nginx"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("postman"),
-  },
-  {
-    condition: "dead",
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("jira"),
-  },
-  {
-    condition: "active",
-    iconUrl: getIcon("json"),
-  },
-  {
-    condition: "dead",
-  },
-];

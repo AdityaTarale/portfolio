@@ -10,7 +10,7 @@ function LinkBoxes() {
       links: [
         {
           linkname: "Home",
-          href: "/",
+          href: "",
           scroll: true,
         },
         {
@@ -31,7 +31,7 @@ function LinkBoxes() {
   ];
 
   return (
-    <section className="flex flex-col gap-6 sm:flex-row sm:gap-12 mx-4 sm:mx-0">
+    <section className="flex flex-col gap-6 sm:flex-row sm:gap-12">
       {linksData.map((box) => (
         <div className="flex flex-col" key={box.title}>
           <h6 className="mb-3 text-sm font-medium text-gray-700">
@@ -46,34 +46,34 @@ function LinkBoxes() {
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-gray-200 bg-white">
-      <div className="sm:w-6/12 mx-auto py-14">
-        <div className="flex flex-col gap-10 sm:flex-row sm:justify-between sm:items-center">
-          {/* Brand Section */}
-          <section className="flex flex-col items-center gap-3">
-            <Image
-              loading="lazy"
-              src={getIcon("signature")}
-              alt="signature"
-              width={249}
-              height={50}
-              className="invert"
-            />
-            <span className="text-sm text-gray-600 mx-4 max-w-sm sm:mx-0 my-2">
-              Whether you have a question, a project in mind, or just want to
-              say hi, my inbox is always open. I&apos;ll try my best to get back
-              to you!
-            </span>
+    <footer className="mx-4 mt-24 bg-white border-t border-gray-200 md:w-6/12 sm:mx-auto">
+      {/* sm:w-6/12 py-14 */}
+      <div className="flex flex-col gap-10 py-14 sm:flex-row sm:justify-between sm:items-center">
+        {/* Brand Section */}
+        <section className="flex flex-col items-center gap-3">
+          <Image
+            loading="lazy"
+            src={getIcon("signature")}
+            alt="signature"
+            width={249}
+            height={50}
+            className="invert"
+            style={{ width: "auto", height: "auto" }}
+          />
+          <span className="max-w-sm my-2 text-sm text-gray-600">
+            Whether you have a question, a project in mind, or just want to say
+            hi, my inbox is always open. I&apos;ll try my best to get back to
+            you!
+          </span>
 
-            <SocialLinks className="mt-4" />
-          </section>
-          {/* Links Section */}
-          <LinkBoxes />
-        </div>
+          <SocialLinks className="mt-4" />
+        </section>
+        {/* Links Section */}
+        <LinkBoxes />
       </div>
-      <div className="py-4 text-center text-sm text-gray-600">
+      <div className="py-4 text-sm text-center text-gray-600">
         <p>Crafted with ❤️ by Aditya Tarale</p>
-        <p className="text-xs text-gray-400 mt-1">
+        <p className="mt-1 text-xs text-gray-400">
           © {new Date().getFullYear()}. Built with Next.js & Tailwind.
         </p>
       </div>

@@ -16,17 +16,18 @@ export default function ExperienceBoxCard({
   date,
 }: ExperienceBoxCardProps) {
   return (
-    <section className="relative flex flex-col sm:flex-row w-full gap-4 p-6 rounded-lg border border-slate-300 bg-gradient-to-b from-gray-50 to-white">
+    <section className="relative flex flex-col w-full gap-4 p-6 border rounded-lg sm:flex-row border-slate-300 bg-gradient-to-b from-gray-50 to-white">
       <Noise />
 
       {/* Logo */}
-      <div className="w-16 sm:w-20">
+      <div className="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0">
         <Image
           src={imgUrl}
           alt={`${companyTitle} Logo`}
           width={80}
           height={80}
-          className="object-contain"
+          className="object-contain w-full h-full"
+          style={{ width: "100%", height: "100%" }}
         />
       </div>
 

@@ -54,11 +54,11 @@ const getDisplayName = (key: string) => NAME_OVERRIDES[key] || key;
 
 function SkillBoxCard({ iconKey }: { iconKey: string }) {
   return (
-    <li className="flex flex-col items-center gap-2 w-full">
-      <div className="relative aspect-square w-full rounded-lg border border-emerald-600/30 bg-emerald-600/10 transition-transform hover:scale-105">
-        <div className="absolute inset-0 p-3 sm:p-4 flex items-center justify-center">
+    <li className="flex flex-col items-center w-full gap-2">
+      <div className="relative w-full transition-transform border rounded-lg aspect-square border-emerald-600/30 bg-emerald-600/10 hover:scale-105">
+        <div className="absolute inset-0 flex items-center justify-center p-3 sm:p-4">
           <Image
-            className="w-full h-full object-contain"
+            className="object-contain w-full h-full"
             alt={iconKey}
             aria-hidden="true"
             src={String(getIcon(iconKey as Parameters<typeof getIcon>[0]))}
@@ -133,16 +133,16 @@ export default function Skills() {
   ];
 
   return (
-    <section className="mx-4 md:w-6/12 sm:mx-auto flex flex-col text-black mb-12">
-      <h3 className="text-3xl font-bold mb-4">My Skills</h3>
+    <section className="flex flex-col mx-4 mb-12 text-black bg-white md:w-6/12 sm:mx-auto">
+      <h3 className="mb-4 text-3xl font-bold">My Skills</h3>
 
-      <div className="flex flex-col gap-10 w-full">
+      <div className="flex flex-col w-full gap-10">
         {skillCategories.map((category) => (
           <div key={category.title}>
-            <h4 className="text-xl font-bold mb-4 text-gray-800 border-b border-gray-200 pb-2">
+            <h4 className="pb-2 mb-4 text-xl font-bold text-gray-800 border-b border-gray-200">
               {category.title}
             </h4>
-            <ul className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-7 xl:grid-cols-10 gap-3 sm:gap-4">
+            <ul className="grid grid-cols-5 gap-3 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-7 xl:grid-cols-10 sm:gap-4">
               {category.keys.map((key) => (
                 <SkillBoxCard iconKey={key} key={key} />
               ))}

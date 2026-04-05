@@ -48,8 +48,8 @@ const SocialLinks = ({ className }: SocialLinksProps) => {
 
   return (
     <div className={className}>
-      <div className="flex flex-wrap justify-center gap-3 sm:gap-4 items-center mt-2">
-        {socialLinks.map((social) => (
+      <div className="flex flex-wrap items-center justify-center gap-3 mt-2 sm:gap-4">
+        {socialLinks.map((social, index) => (
           <Link
             key={social.href}
             href={social.href}
@@ -63,6 +63,7 @@ const SocialLinks = ({ className }: SocialLinksProps) => {
               alt={social.alt}
               width={20}
               height={20}
+              loading={index === 0 ? "eager" : "lazy"} // ✅ mail icon (first) loads eagerly
             />
           </Link>
         ))}

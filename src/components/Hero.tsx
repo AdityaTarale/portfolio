@@ -10,28 +10,29 @@ export default function Hero() {
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-white to-transparent" />
 
       {/* Hero content */}
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 h-full text-center md:text-left text-black mt-12 md:mt-0">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full gap-10 mt-12 text-center text-black md:flex-row md:gap-16 md:text-left md:mt-0">
         {/* Left Side: Avatar + Name Card */}
         <div className="flex flex-col items-center flex-shrink-0 animate-fade-up animate-duration-[1000ms]">
-          <div className="w-56 h-56 sm:w-64 sm:h-64 relative overflow-hidden rounded-full mb-6">
+          <div className="relative w-56 h-56 mb-6 overflow-hidden rounded-full sm:w-64 sm:h-64">
             <Image
               src="/images/my-profile.jpg"
               alt="Aditya Tarale"
               fill
               className="object-cover"
               priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-          <h2 className="text-3xl font-bold text-black mt-2">Aditya Tarale</h2>
-          <h3 className="text-xl text-gray-600 mt-1">Software Engineer</h3>
-          
+          <h2 className="mt-2 text-3xl font-bold text-black">Aditya Tarale</h2>
+          <h3 className="mt-1 text-xl text-gray-600">Software Engineer</h3>
+
           <div className="mt-6 w-full max-w-[280px]">
             <SocialLinks />
           </div>
         </div>
 
         {/* Right Side: Headline & Bio */}
-        <div className="flex flex-col items-center md:items-start max-w-2xl">
+        <div className="flex flex-col items-center max-w-2xl md:items-start">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold animate-fade-up animate-duration-[1200ms] animate-delay-200 leading-tight">
             Engineer by Day,
             <br className="hidden md:block" /> Creator Always

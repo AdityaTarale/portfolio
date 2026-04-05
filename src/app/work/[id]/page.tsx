@@ -1,6 +1,8 @@
 import { ProjectPreview } from "@/elements/ProjectPreview";
 import Link from "next/link";
 import caseStudyData from "../../../../public/data/case-study.json";
+import Image from "next/image";
+import { getIcon } from "@/utils/iconsRegistry";
 
 export default async function Work({
   params,
@@ -13,25 +15,38 @@ export default async function Work({
 
   if (!project) {
     return (
-      <div className="text-center text-black mt-12">
+      <div className="mt-12 text-center text-black">
         <p className="text-2xl font-semibold">Project not found</p>
       </div>
     );
   }
 
   return (
-    <section className="mx-4 md:w-6/12 sm:mx-auto flex flex-col gap-6 mt-12">
+    <section className="flex flex-col gap-6 mx-4 mt-12 md:w-6/12 sm:mx-auto">
       {/* Title */}
-      <h3 className="text-3xl font-bold text-black mb-4">{project.title}</h3>
+      <h3 className="mb-4 text-3xl font-bold text-black">{project.title}</h3>
 
       {/* Project Preview */}
       <ProjectPreview
         bg={project.projectPreview.bg}
         image={project.projectPreview.image}
       />
-      <Link href={project.link.url} target="_blank">
-        <span className="px-4 py-1 border-[1px] border-gray-300 text-gray-800 rounded-full">
+      <Link
+        href={project.link.url}
+        target="_blank"
+        className="mt-2 text-sm font-semibold text-blue-800 hover:underline"
+      >
+        <span className="flex items-center gap-1">
           {project.link.title}
+          <Image
+            loading="lazy"
+            className="w-4 h-4 brightness-0"
+            alt={"chevron-right"}
+            aria-hidden="true"
+            src={getIcon("chevronRight")}
+            width={10}
+            height={10}
+          />
         </span>
       </Link>
 
@@ -39,13 +54,13 @@ export default async function Work({
       {project.sections.map((section, index) => (
         <div key={index}>
           {/* Section Title */}
-          <h4 className="text-xl font-bold text-black mb-4">{section.title}</h4>
+          <h4 className="mb-4 text-xl font-bold text-black">{section.title}</h4>
 
           {/* Section Content or List */}
           {section.content ? (
             <p className="text-gray-800">{section.content}</p>
           ) : (
-            <ul className="list-disc list-inside text-gray-800">
+            <ul className="text-gray-800 list-disc list-inside">
               {section.list?.map((item, idx) => (
                 <li key={idx}>{item}</li>
               ))}

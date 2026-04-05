@@ -3,7 +3,6 @@ import Education from "@/components/Education";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Work from "@/components/Work";
-import Footer from "@/layouts/Footer";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <Work />
       <Skills />
       <Education />
-      <Footer />
     </main>
   );
 }

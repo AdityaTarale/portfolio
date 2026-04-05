@@ -10,8 +10,9 @@ function LinkBoxes() {
       links: [
         {
           linkname: "Home",
-          href: "",
+          href: "/",
           scroll: true,
+          target: "_top",
         },
         {
           linkname: "Resume",

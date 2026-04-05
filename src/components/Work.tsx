@@ -32,6 +32,9 @@ export default function Work() {
                   {project.linkUrl && (
                     <Link
                       href={project.linkUrl}
+                      {...(project.isCaseStudyEnabled
+                        ? {}
+                        : { target: "_blank" })}
                       className="mt-2 text-sm font-semibold text-blue-800 hover:underline"
                     >
                       <span className="flex items-center gap-1">

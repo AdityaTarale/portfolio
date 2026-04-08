@@ -73,10 +73,7 @@ export default function Footer() {
         <LinkBoxes />
       </div>
       <div className="py-4 text-sm text-center text-gray-600">
-        <p>Crafted with ❤️ by Aditya Tarale</p>
-        <p className="mt-1 text-xs text-gray-400">
-          © {new Date().getFullYear()}. Built with Next.js & Tailwind.
-        </p>
+        <p>Built by Aditya Tarale</p>
       </div>
     </footer>
   );

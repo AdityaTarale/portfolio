@@ -15,8 +15,42 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aditya Tarale",
-  description: "Software Engineer",
+  title: "Aditya Tarale | Software Engineer",
+  description:
+    "Portfolio of Aditya Tarale, a Software Engineer focused on building high-performance, human-centered digital experiences.",
+  keywords: [
+    "Aditya Tarale",
+    "Software Engineer",
+    "React Developer",
+    "Next.js",
+    "Full Stack",
+  ],
+  authors: [{ name: "Aditya Tarale" }],
+  openGraph: {
+    title: "Aditya Tarale | Software Engineer",
+    description:
+      "Software Engineer focused on building high-performance digital experiences.",
+    url: "https://www.adityatarale.com/",
+    siteName: "Aditya Tarale",
+    images: [
+      {
+        url: "/images/my-profile.jpg",
+        width: 800,
+        height: 800,
+        alt: "Aditya Tarale",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aditya Tarale | Software Engineer",
+    description:
+      "Software Engineer focused on building high-performance digital experiences.",
+    images: ["/images/my-profile.jpg"],
+  },
+  metadataBase: new URL("https://www.adityatarale.com"),
 };
 
 export default function RootLayout({
@@ -26,6 +60,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Aditya Tarale",
+              url: "https://www.adityatarale.com/",
+              jobTitle: "Software Engineer",
+              sameAs: [
+                "https://github.com/AdityaTarale",
+                "https://www.linkedin.com/in/aditya-tarale-about/",
+                "https://x.com/aditarale1805",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >

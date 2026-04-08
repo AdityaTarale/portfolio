@@ -23,8 +23,8 @@ export default function Hero() {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-          <h2 className="mt-2 text-3xl font-bold text-black">Aditya Tarale</h2>
-          <h3 className="mt-1 text-xl text-gray-600">Software Engineer</h3>
+          <h1 className="mt-2 text-3xl font-bold text-black">Aditya Tarale</h1>
+          <div className="mt-1 text-xl text-gray-600 font-medium">Software Engineer</div>
 
           <div className="mt-6 w-full max-w-[280px]">
             <SocialLinks />
@@ -33,10 +33,10 @@ export default function Hero() {
 
         {/* Right Side: Headline & Bio */}
         <div className="flex flex-col items-center max-w-2xl md:items-start">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold animate-fade-up animate-duration-[1200ms] animate-delay-200 leading-tight">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold animate-fade-up animate-duration-[1200ms] animate-delay-200 leading-tight">
             Engineer by Day,
             <br className="hidden md:block" /> Creator Always
-          </h1>
+          </h2>
 
           <div className="mt-8 space-y-5 text-base sm:text-lg text-gray-700 animate-fade-up animate-duration-[1000ms] animate-delay-400 leading-relaxed text-left">
             <p>

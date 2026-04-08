@@ -7,7 +7,7 @@ import projectData from "../../public/data/project.json";
 export default function Work() {
   return (
     <div className="mx-4 bg-white md:w-6/12 sm:mx-auto">
-      <h3 className="mb-4 text-3xl font-bold text-black">Projects</h3>
+      <h2 className="mb-4 text-3xl font-bold text-black">Projects</h2>
       <div className="flex flex-col gap-8">
         {projectData.map((project) => {
           return (
@@ -24,9 +24,9 @@ export default function Work() {
               </div>
 
               <div className="flex flex-col w-full gap-4 md:w-1/2">
-                <h5 className="mt-2 text-2xl font-bold text-black sm:text-3xl">
+                <h3 className="mt-2 text-2xl font-bold text-black sm:text-3xl">
                   {project.title}
-                </h5>
+                </h3>
                 <div className="flex flex-col gap-2 text-base text-gray-800">
                   <p>{project.description}</p>
                   {project.linkUrl && (
@@ -34,8 +34,13 @@ export default function Work() {
                       href={project.linkUrl}
                       {...(project.isCaseStudyEnabled
                         ? {}
-                        : { target: "_blank" })}
+                        : { target: "_blank", rel: "noreferrer" })}
                       className="mt-2 text-sm font-semibold text-blue-800 hover:underline"
+                      aria-label={`${
+                        project.isCaseStudyEnabled
+                          ? "Read Case Study about"
+                          : "Visit Website of"
+                      } ${project.title}`}
                     >
                       <span className="flex items-center gap-1">
                         {project.isCaseStudyEnabled

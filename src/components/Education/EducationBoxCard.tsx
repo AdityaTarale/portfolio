@@ -33,12 +33,12 @@ export default function EducationBoxCard({
 
       {/* Content */}
       <div className="flex-1">
-        <h4 className="text-lg font-semibold text-blue-950 sm:text-xl">
+        <h3 className="text-lg font-semibold text-blue-950 sm:text-xl">
           {institutionName}
-        </h4>
-        <h5 className="text-sm italic text-gray-600 sm:text-base">
+        </h3>
+        <h4 className="text-sm italic text-gray-600 sm:text-base">
           {degreeTitle}
-        </h5>
+        </h4>
         <div className="mt-2 text-gray-800">{description}</div>
       </div>
 
@@ -51,5 +51,10 @@ export default function EducationBoxCard({
 }
 
 const Noise = () => (
-  <div className="absolute inset-0 w-full h-full opacity-10 pointer-events-none bg-[url('/images/noise.webp')] bg-[length:25%]" />
+  <div 
+    className="absolute inset-0 w-full h-full opacity-[0.03] pointer-events-none" 
+    style={{ 
+      backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` 
+    }} 
+  />
 );

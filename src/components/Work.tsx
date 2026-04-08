@@ -9,7 +9,7 @@ export default function Work() {
     <div className="mx-4 bg-white md:w-6/12 sm:mx-auto">
       <h2 className="mb-4 text-3xl font-bold text-black">Projects</h2>
       <div className="flex flex-col gap-8">
-        {projectData.map((project) => {
+        {projectData.map((project, index) => {
           return (
             <div
               key={project.title}
@@ -20,6 +20,7 @@ export default function Work() {
                   bg={project.bgUrl}
                   image={project.imageUrl}
                   className="w-full aspect-video"
+                  priority={index < 2}
                 />
               </div>
 

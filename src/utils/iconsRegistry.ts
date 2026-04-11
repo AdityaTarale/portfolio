@@ -58,6 +58,11 @@ const icons = {
   stackoverflow: "/icons/stackoverflow.svg",
   codeforces: "/icons/codeforces.svg",
   x: "/icons/x.svg",
+  docker: "/icons/docker.svg",
+  git: "/icons/git.svg",
+  kubernetes: "/icons/kubernetes.svg",
+  netlify: "/icons/netlify.svg",
+  vercel: "/icons/vercel.svg",
 };
 
 export const getIcon = (iconKey: keyof typeof icons) => icons[iconKey];

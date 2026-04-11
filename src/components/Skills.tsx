@@ -48,14 +48,19 @@ const NAME_OVERRIDES: Record<string, string> = {
   postman: "Postman",
   jira: "Jira",
   json: "JSON",
+  docker: "Docker",
+  git: "Git",
+  kubernetes: "Kubernetes",
+  netlify: "Netlify",
+  vercel: "Vercel",
 };
 
 const getDisplayName = (key: string) => NAME_OVERRIDES[key] || key;
 
 function SkillBoxCard({ iconKey }: { iconKey: string }) {
   return (
-    <li className="flex flex-col items-center w-full gap-2">
-      <div className="relative w-full transition-transform border rounded-lg aspect-square border-emerald-600/30 bg-emerald-600/10 hover:scale-105">
+    <li className="flex flex-col items-center w-full gap-2 group">
+      <div className="relative w-full transition-all duration-300 border rounded-lg aspect-square border-emerald-600/30 bg-emerald-600/10 group-hover:bg-emerald-600/20 group-hover:scale-105 group-hover:shadow-sm">
         <div className="absolute inset-0 flex items-center justify-center p-3 sm:p-4">
           <Image
             className="object-contain w-full h-full"
@@ -74,18 +79,27 @@ function SkillBoxCard({ iconKey }: { iconKey: string }) {
   );
 }
 
+function SoftSkillBadge({ name }: { name: string }) {
+  return (
+    <li className="px-4 py-2 text-xs font-semibold rounded-full bg-emerald-600/10 text-black border border-emerald-600/30 hover:bg-emerald-600/20 transition-colors duration-200">
+      {name}
+    </li>
+  );
+}
+
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Languages & Frontend",
+      title: "Core Languages",
+      keys: ["javascript", "typescript", "python", "html", "css", "json"],
+    },
+    {
+      title: "Web Technologies",
+      keys: ["react", "next", "node", "express", "firebase", "mongo", "postgresql", "socket"],
+    },
+    {
+      title: "Frameworks & UI",
       keys: [
-        "html",
-        "css",
-        "javascript",
-        "python",
-        "typescript",
-        "react",
-        "next",
         "redux",
         "query",
         "saga",
@@ -103,43 +117,55 @@ export default function Skills() {
       ],
     },
     {
-      title: "Backend & Databases",
-      keys: ["node", "express", "firebase", "mongo", "postgresql", "socket"],
+      title: "Containerization & Deployment",
+      keys: ["docker", "kubernetes", "nginx", "vercel", "netlify"],
     },
     {
-      title: "Tools & Others",
+      title: "Version Control",
+      keys: ["git", "githubColored"],
+    },
+    {
+      title: "Testing & Tooling",
       keys: [
+        "jest",
+        "cypress",
+        "testing",
+        "storybook",
+        "postman",
+        "jira",
         "npm",
         "yarn",
         "webpack",
         "vite",
         "rollupjs",
-        "jest",
-        "cypress",
-        "testing",
-        "storybook",
-        "githubColored",
         "vscode",
         "androidStudio",
         "xcode",
         "linux",
         "ubuntu",
-        "nginx",
-        "postman",
-        "jira",
-        "json",
       ],
     },
   ];
 
+  const softSkills = [
+    "Problem Solving",
+    "Team Collaboration",
+    "Agile/Scrum",
+    "Adaptability",
+    "Communication",
+    "Leadership",
+    "Time Management",
+    "Analytical Thinking"
+  ];
+
   return (
     <section className="flex flex-col mx-4 mb-12 text-black bg-white md:w-6/12 sm:mx-auto">
-      <h2 className="mb-4 text-3xl font-bold">My Skills</h2>
+      <h2 className="mb-8 text-3xl font-bold">My Skills</h2>
 
-      <div className="flex flex-col w-full gap-10">
+      <div className="flex flex-col w-full gap-12">
         {skillCategories.map((category) => (
           <div key={category.title}>
-            <h3 className="pb-2 mb-4 text-xl font-bold text-gray-800 border-b border-gray-200">
+            <h3 className="pb-2 mb-6 text-xl font-bold text-gray-800 border-b border-gray-200">
               {category.title}
             </h3>
             <ul className="grid grid-cols-5 gap-3 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-7 xl:grid-cols-10 sm:gap-4">
@@ -149,6 +175,18 @@ export default function Skills() {
             </ul>
           </div>
         ))}
+
+        {/* Soft Skills Section */}
+        <div>
+          <h3 className="pb-2 mb-6 text-xl font-bold text-gray-800 border-b border-gray-200">
+            Soft Skills
+          </h3>
+          <ul className="flex flex-wrap gap-3">
+            {softSkills.map((skill) => (
+              <SoftSkillBadge key={skill} name={skill} />
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

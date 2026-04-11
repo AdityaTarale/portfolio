@@ -30,6 +30,8 @@ export default async function Work({
       <ProjectPreview
         bg={project.projectPreview.bg}
         image={project.projectPreview.image}
+        className="w-full aspect-video md:h-[450px]"
+        priority
       />
       <Link
         href={project.link.url}

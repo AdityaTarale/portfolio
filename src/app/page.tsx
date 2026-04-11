@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <main className="flex flex-col gap-24">
       <Hero />
-      <Experience />
-      <Work />
       <Skills />
+      <Work />
+      <Experience />
       <Education />
     </main>
   );

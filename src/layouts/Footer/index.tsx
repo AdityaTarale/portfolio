@@ -73,7 +73,7 @@ export default function Footer() {
         <LinkBoxes />
       </div>
       <div className="py-4 text-sm text-center text-gray-600">
-        <p>Built by Aditya Tarale</p>
+        <p>Built by <a href="https://www.linkedin.com/in/aditya-tarale-about/" target="_blank"><span className="text-emerald-600">Aditya Tarale</span></a></p>
       </div>
     </footer>
   );

@@ -7,6 +7,7 @@ const NAME_OVERRIDES: Record<string, string> = {
   javascript: "JavaScript",
   typescript: "TypeScript",
   react: "React",
+  reactNative: "React Native",
   next: "Next.js",
   redux: "Redux",
   query: "React Query",
@@ -22,6 +23,7 @@ const NAME_OVERRIDES: Record<string, string> = {
   expo: "Expo",
   ionic: "Ionic",
   openLayers: "OpenLayers",
+  mapbox: "Mapbox",
   node: "Node.js",
   python: "Python",
   express: "Express",
@@ -53,6 +55,7 @@ const NAME_OVERRIDES: Record<string, string> = {
   kubernetes: "Kubernetes",
   netlify: "Netlify",
   vercel: "Vercel",
+  antigravity: "Antigravity",
 };
 
 const getDisplayName = (key: string) => NAME_OVERRIDES[key] || key;
@@ -90,20 +93,20 @@ function SoftSkillBadge({ name }: { name: string }) {
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Core Languages",
-      keys: ["javascript", "typescript", "python", "html", "css", "json"],
+      title: "Languages",
+      keys: ["html", "css", "javascript", "typescript", "python", "json"],
     },
     {
-      title: "Web Technologies",
-      keys: ["react", "next", "node", "express", "firebase", "mongo", "postgresql", "socket"],
+      title: "Frontend Frameworks",
+      keys: ["react", "next"],
     },
     {
-      title: "Frameworks & UI",
+      title: "State Management",
+      keys: ["redux", "saga", "query", "router"],
+    },
+    {
+      title: "Styling & UI Libraries",
       keys: [
-        "redux",
-        "query",
-        "saga",
-        "router",
         "tailwind",
         "scss",
         "material",
@@ -111,10 +114,29 @@ export default function Skills() {
         "shadcn",
         "radix",
         "styleGuide",
-        "expo",
-        "ionic",
         "openLayers",
+        "mapbox",
       ],
+    },
+    {
+      title: "Mobile & Hybrid",
+      keys: ["reactNative", "expo", "ionic"],
+    },
+    {
+      title: "Backend & Runtime",
+      keys: ["node", "express", "firebase", "socket"],
+    },
+    {
+      title: "Databases",
+      keys: ["mongo", "postgresql"],
+    },
+    {
+      title: "Build Tools & Package Managers",
+      keys: ["npm", "yarn", "webpack", "vite", "rollupjs"],
+    },
+    {
+      title: "Testing & QA",
+      keys: ["jest", "cypress", "testing", "storybook"],
     },
     {
       title: "Containerization & Deployment",
@@ -125,25 +147,20 @@ export default function Skills() {
       keys: ["git", "githubColored"],
     },
     {
-      title: "Testing & Tooling",
+      title: "Developer Tools",
       keys: [
-        "jest",
-        "cypress",
-        "testing",
-        "storybook",
-        "postman",
-        "jira",
-        "npm",
-        "yarn",
-        "webpack",
-        "vite",
-        "rollupjs",
         "vscode",
+        "antigravity",
         "androidStudio",
         "xcode",
+        "postman",
         "linux",
         "ubuntu",
       ],
+    },
+    {
+      title: "Collaboration",
+      keys: ["jira"],
     },
   ];
 
@@ -155,7 +172,7 @@ export default function Skills() {
     "Communication",
     "Leadership",
     "Time Management",
-    "Analytical Thinking"
+    "Analytical Thinking",
   ];
 
   return (

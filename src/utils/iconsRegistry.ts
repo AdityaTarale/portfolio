@@ -1,5 +1,6 @@
 const icons = {
   react: "/icons/react.svg",
+  reactNative: "/icons/react.svg",
   query: "/icons/react-query.svg",
   formik: "/icons/formik.svg",
   javascript: "/icons/javascript.svg",
@@ -18,6 +19,7 @@ const icons = {
   linux: "/icons/linux.svg",
   githubColored: "/icons/github-octocat.svg",
   openLayers: "/icons/openlayers.svg",
+  mapbox: "/icons/mapbox.svg",
   ionic: "/icons/ionic.svg",
   nginx: "/icons/nginx.svg",
   jira: "/icons/jira.svg",
@@ -63,6 +65,7 @@ const icons = {
   kubernetes: "/icons/kubernetes.svg",
   netlify: "/icons/netlify.svg",
   vercel: "/icons/vercel.svg",
+  antigravity: "/icons/antigravity.svg",
 };
 
 export const getIcon = (iconKey: keyof typeof icons) => icons[iconKey];

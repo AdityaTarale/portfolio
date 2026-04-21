@@ -6,6 +6,7 @@ const icons = {
   javascript: "/icons/javascript.svg",
   typescript: "/icons/typescript.svg",
   redux: "/icons/redux.svg",
+  rtkQuery: "/icons/redux.svg",
   saga: "/icons/saga.svg",
   node: "/icons/nodejs.svg",
   python: "/icons/python.svg",
@@ -66,6 +67,18 @@ const icons = {
   netlify: "/icons/netlify.svg",
   vercel: "/icons/vercel.svg",
   antigravity: "/icons/antigravity.svg",
+  nx: "/icons/nx.svg",
+  bootstrap: "/icons/bootstrap.svg",
+  axios: "/icons/azios.svg",
+  chartjs: "/icons/chartjs.svg",
+  azure: "/icons/azure.svg",
+  aws: "/icons/aws.svg",
+  gcp: "/icons/gcp.svg",
+  figma: "/icons/figma.svg",
+  digitalOcean: "/icons/digital-ocean.svg",
+  reactNavigation: "/icons/spiro.svg",
+  unistyles: "/icons/unicorn.svg",
+  victoryNative: "/icons/victory.svg",
 };
 
 export const getIcon = (iconKey: keyof typeof icons) => icons[iconKey];

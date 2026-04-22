@@ -79,6 +79,7 @@ const icons = {
   reactNavigation: "/icons/spiro.svg",
   unistyles: "/icons/unicorn.svg",
   victoryNative: "/icons/victory.svg",
+  cicd: "/icons/cicd.svg",
 };
 
 export const getIcon = (iconKey: keyof typeof icons) => icons[iconKey];

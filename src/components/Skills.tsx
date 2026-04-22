@@ -69,6 +69,7 @@ const NAME_OVERRIDES: Record<string, string> = {
   reactNavigation: "React Navigation",
   unistyles: "Unistyles",
   victoryNative: "Victory Native",
+  cicd: "CI/CD",
 };
 
 const getDisplayName = (key: string) => NAME_OVERRIDES[key] || key;
@@ -160,7 +161,7 @@ export default function Skills() {
     },
     {
       title: "Containerization & Deployment",
-      keys: ["docker", "kubernetes", "nginx", "vercel", "netlify"],
+      keys: ["cicd", "docker", "kubernetes", "nginx", "vercel", "netlify"],
     },
     {
       title: "Cloud Platforms",
@@ -168,7 +169,14 @@ export default function Skills() {
     },
     {
       title: "Developer Tools",
-      keys: ["vscode", "antigravity", "figma", "postman", "androidStudio", "xcode"],
+      keys: [
+        "vscode",
+        "antigravity",
+        "figma",
+        "postman",
+        "androidStudio",
+        "xcode",
+      ],
     },
     {
       title: "OS & Environments",

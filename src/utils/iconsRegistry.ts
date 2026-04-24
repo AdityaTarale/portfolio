@@ -80,6 +80,7 @@ const icons = {
   unistyles: "/icons/unicorn.svg",
   victoryNative: "/icons/victory.svg",
   cicd: "/icons/cicd.svg",
+  kong: "/icons/kong.svg",
 };
 
 export const getIcon = (iconKey: keyof typeof icons) => icons[iconKey];

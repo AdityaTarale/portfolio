@@ -47,7 +47,7 @@ function LinkBoxes() {
 
 export default function Footer() {
   return (
-    <footer className="mx-4 mt-24 bg-white border-t border-gray-200 md:w-6/12 sm:mx-auto">
+    <footer className="mx-4 mt-24 bg-white border-t border-gray-200 md:w-8/12 lg:w-7/12 sm:mx-auto">
       {/* sm:w-6/12 py-14 */}
       <div className="flex flex-col gap-10 py-14 sm:flex-row sm:justify-between sm:items-center">
         {/* Brand Section */}

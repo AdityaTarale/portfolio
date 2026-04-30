@@ -3,7 +3,7 @@ import SocialLinks from "@/layouts/Footer/SocialLinks";
 
 export default function Hero() {
   return (
-    <div className="mx-4 md:w-6/12 sm:mx-auto relative min-h-[calc(100vh-5rem)] bg-white overflow-hidden flex flex-col items-center justify-center py-20">
+    <div className="mx-4 md:w-8/12 lg:w-7/12 sm:mx-auto relative min-h-[calc(100vh-5rem)] bg-white overflow-hidden flex flex-col items-center justify-center py-20">
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 opacity-50 bg-center bg-[length:40px_40px] bg-[linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px)]" />
 

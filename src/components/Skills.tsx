@@ -75,22 +75,20 @@ const NAME_OVERRIDES: Record<string, string> = {
 
 const getDisplayName = (key: string) => NAME_OVERRIDES[key] || key;
 
-function SkillBoxCard({ iconKey }: { iconKey: string }) {
+function SkillChip({ iconKey }: { iconKey: string }) {
   return (
-    <li className="flex flex-col items-center w-full gap-2 group">
-      <div className="relative w-full transition-all duration-300 border rounded-lg aspect-square border-emerald-600/30 bg-emerald-600/10 group-hover:bg-emerald-600/20 group-hover:scale-105 group-hover:shadow-sm">
-        <div className="absolute inset-0 flex items-center justify-center p-2 sm:p-3">
-          <Image
-            className="object-contain w-full h-full"
-            alt={iconKey}
-            aria-hidden="true"
-            src={String(getIcon(iconKey as Parameters<typeof getIcon>[0]))}
-            width={40}
-            height={40}
-          />
-        </div>
+    <li className="flex items-center gap-2 px-3 py-2 transition-all duration-300 border rounded-xl border-emerald-600/10 bg-emerald-600/[0.03] hover:bg-emerald-600/[0.08] hover:border-emerald-600/30 hover:shadow-[0_0_15px_rgba(5,150,105,0.1)] group">
+      <div className="relative flex-shrink-0 w-5 h-5 transition-transform duration-300 group-hover:scale-110">
+        <Image
+          className="object-contain w-full h-full"
+          alt={iconKey}
+          aria-hidden="true"
+          src={String(getIcon(iconKey as Parameters<typeof getIcon>[0]))}
+          width={20}
+          height={20}
+        />
       </div>
-      <span className="text-[10px] sm:text-xs text-center text-gray-700 font-medium leading-tight">
+      <span className="text-sm font-semibold text-gray-800 whitespace-nowrap">
         {getDisplayName(iconKey)}
       </span>
     </li>
@@ -99,7 +97,7 @@ function SkillBoxCard({ iconKey }: { iconKey: string }) {
 
 function SoftSkillBadge({ name }: { name: string }) {
   return (
-    <li className="px-4 py-2 text-xs font-semibold rounded-full bg-emerald-600/10 text-black border border-emerald-600/30 hover:bg-emerald-600/20 transition-colors duration-200">
+    <li className="px-4 py-2 text-sm font-semibold rounded-xl bg-emerald-600/[0.03] text-gray-800 border border-emerald-600/10 hover:bg-emerald-600/[0.08] hover:border-emerald-600/30 transition-all duration-300">
       {name}
     </li>
   );
@@ -201,26 +199,33 @@ export default function Skills() {
   ];
 
   return (
-    <section className="flex flex-col mx-4 mb-12 text-black bg-white md:w-6/12 sm:mx-auto">
-      <h2 className="mb-8 text-3xl font-bold">My Skills</h2>
+    <section className="flex flex-col mx-4 mb-12 text-black bg-white md:w-8/12 lg:w-7/12 sm:mx-auto">
+      <div className="flex items-center gap-4 mb-12">
+        <h2 className="text-4xl font-black tracking-tight text-gray-900 whitespace-nowrap">My Skills</h2>
+        <div className="flex-1 h-[2px] bg-gradient-to-r from-emerald-600/50 to-transparent translate-y-[2px]"></div>
+      </div>
 
-      <div className="flex flex-col w-full gap-12">
-        {skillCategories.map((category) => (
-          <div key={category.title}>
-            <h3 className="pb-2 mb-6 text-xl font-bold text-gray-800 border-b border-gray-200">
-              {category.title}
-            </h3>
-            <ul className="grid grid-cols-6 gap-2 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-9 xl:grid-cols-12 sm:gap-3">
-              {category.keys.map((key) => (
-                <SkillBoxCard iconKey={key} key={key} />
-              ))}
-            </ul>
-          </div>
-        ))}
+      <div className="flex flex-col w-full gap-10">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+          {skillCategories.map((category) => (
+            <div key={category.title} className="flex flex-col">
+              <h3 className="flex items-center gap-2 mb-4 text-sm font-bold tracking-widest text-emerald-700 uppercase">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                {category.title}
+              </h3>
+              <ul className="flex flex-wrap gap-2">
+                {category.keys.map((key) => (
+                  <SkillChip iconKey={key} key={key} />
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
 
         {/* Soft Skills Section */}
-        <div>
-          <h3 className="pb-2 mb-6 text-xl font-bold text-gray-800 border-b border-gray-200">
+        <div className="pt-8 mt-4 border-t border-gray-100">
+          <h3 className="flex items-center gap-2 mb-6 text-sm font-bold tracking-widest text-emerald-700 uppercase">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
             Soft Skills
           </h3>
           <ul className="flex flex-wrap gap-3">
@@ -233,3 +238,4 @@ export default function Skills() {
     </section>
   );
 }
+

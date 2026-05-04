@@ -80,10 +80,12 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background min-h-screen`}
       >
-        {children}
-        <Footer />
+        <div className="bg-white md:w-8/12 lg:w-7/12 mx-auto min-h-screen shadow-sm">
+          {children}
+          <Footer />
+        </div>
         <ScrollToTop />
       </body>
     </html>

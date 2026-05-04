@@ -3,19 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #fdfdfd;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 html {
-  scroll-behavior: smooth;
+  /* Removed scroll-behavior: smooth to fix Next.js navigation issues */
 }
 
 body {

@@ -22,7 +22,7 @@ export default async function Work({
   }
 
   return (
-    <section className="flex flex-col gap-6 mx-4 mt-12 md:w-6/12 sm:mx-auto">
+    <section className="flex flex-col gap-6 px-4 pt-12 bg-white">
       {/* Title */}
       <h3 className="mb-4 text-3xl font-bold text-black">{project.title}</h3>
 
